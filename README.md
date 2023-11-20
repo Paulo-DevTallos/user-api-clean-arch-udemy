@@ -93,3 +93,11 @@ export default {
 1. Arquivo de variaveis de ambiente:
 Utilizando o ConfigModule.forRoot() no Nest por padrão ele considera o arquivo dotenv, por isso para criar ambientes
 personalizados (customizados) é preciso alterar as configurações do ConfigModule
+
+2. Boas práticas para caotura de enviroments:
+Ao iniciar um serviço para fazer que a variavel de ambiente seja capturada corretamente deve-se apontar o ambiente no
+script inicializador:
+```sh
+"start:dev": NODE_ENV=deevlopment nest start --watch
+```
+Para ambiente de testes não há a necessidade de atribuir o ambiente, por padrão ele entenderá que é teste
