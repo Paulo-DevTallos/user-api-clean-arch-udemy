@@ -89,3 +89,7 @@ export default {
   }),
 }
 ```
+
+1. Arquivo de variaveis de ambiente:
+Utilizando o ConfigModule.forRoot() no Nest por padrão ele considera o arquivo dotenv, por isso para criar ambientes
+personalizados (customizados) é preciso alterar as configurações do ConfigModule
