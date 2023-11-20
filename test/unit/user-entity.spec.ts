@@ -41,4 +41,11 @@ describe('UserEntity unit tests', () => {
     expect(sut.props.email).toEqual(user.email);
     expect(sut.props.password).toEqual(user.password);
   });
+
+  it('should test name getter returns name', () => {
+    const getName = sut.name;
+    expect(getName).toBeDefined();
+    expect(getName).toEqual(sut.props.name);
+    expect(typeof getName).toBe('string');
+  });
 });
