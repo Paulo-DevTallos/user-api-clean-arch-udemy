@@ -3,7 +3,7 @@ import { UserEntity, UserProps } from '@/users/domain/entities/user.entity';
 const makeSut = () => {
   const userProps: UserProps = {
     name: 'any_name',
-    email: 'any_email',
+    email: 'any_email@example.com',
     password: 'any_password',
   };
   const sut = new UserEntity(userProps);
@@ -28,7 +28,17 @@ describe('UserEntity unit tests', () => {
       password: expect.any(String),
       created_at: expect.any(Date),
     };
-    console.log(sut)
     expect(sut.props).toMatchObject(user);
+  });
+
+  it('should test all fields receive data as defined', () => {
+    const user = {
+      name: 'any_name',
+      email: 'any_email@example.com',
+      password: 'any_password',
+    };
+    expect(sut.props.name).toEqual(user.name);
+    expect(sut.props.email).toEqual(user.email);
+    expect(sut.props.password).toEqual(user.password);
   });
 });
