@@ -1,17 +1,17 @@
 import { UserEntity, UserProps } from '@/users/domain/entities/user.entity';
 
-const makeSut = () => {
-  const userProps: UserProps = {
-    name: 'any_name',
-    email: 'any_email@example.com',
-    password: 'any_password',
-  };
-  const sut = new UserEntity(userProps);
-  return sut;
-};
-
 describe('UserEntity unit tests', () => {
-  const sut = makeSut();
+  let props: UserProps;
+  let sut: UserEntity;
+
+  beforeEach(() => {
+    props = {
+      name: 'any_name',
+      email: 'any_email@example.com',
+      password: 'any_password',
+    };
+    sut = new UserEntity(props);
+  });
 
   it('should test constructor method is defined', () => {
     expect(sut.props).toBeDefined();
