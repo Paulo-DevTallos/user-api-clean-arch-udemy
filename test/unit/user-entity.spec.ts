@@ -62,4 +62,10 @@ describe('UserEntity unit tests', () => {
     expect(getPassword).toEqual(sut.props.password);
     expect(typeof getPassword).toBe('string');
   });
+
+  it('should test created_at getter returns created_at', () => {
+    const getCreatedAt = sut.createdAt;
+    expect(getCreatedAt).toBeDefined();
+    expect(getCreatedAt).toBeInstanceOf(Date);
+  });
 });
