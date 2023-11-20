@@ -101,3 +101,6 @@ script inicializador:
 "start:dev": NODE_ENV=deevlopment nest start --watch
 ```
 Para ambiente de testes não há a necessidade de atribuir o ambiente, por padrão ele entenderá que é teste
+
+3. A ideia é que qualquer informação da entidade só possa ser manipulada pela propria entidade através de seus próprios
+métodos.
