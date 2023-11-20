@@ -26,6 +26,7 @@ describe('UserEntity unit tests', () => {
       name: expect.any(String),
       email: expect.any(String),
       password: expect.any(String),
+      created_at: expect.any(Date),
     };
     console.log(sut)
     expect(sut.props).toMatchObject(user);
