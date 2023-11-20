@@ -16,4 +16,14 @@ describe('UserEntity unit tests', () => {
   it('should test constructor method is defined', () => {
     expect(sut.props).toBeDefined();
   });
+
+  it('should test all fields receive type data as defined', () => {
+    const user = {
+      name: expect.any(String),
+      email: expect.any(String),
+      password: expect.any(String),
+    };
+    console.log(sut)
+    expect(sut.props).toMatchObject(user);
+  });
 });
