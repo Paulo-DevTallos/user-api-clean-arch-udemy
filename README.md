@@ -71,3 +71,21 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Observações:
+Configurar o path para que o jest possa enxergar o '@/' como caminho relativo de pasta
+Uma vez configurado os paths no tsconfig é possível "importar" essa referência para
+dentro do arquivo de configuração do jest
+```sh
+## configuração realizada no tsconfig
+"compilerOptions: { "baseUrl": "./", "paths": { "@/*": ["./src/*"] } }"
+
+## adcionando configurações no jest
+import { pathsToModuleNameMapper } from 'ts-jest';
+import { compilerOptions } from './tsconfig.json';
+export default {
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>/',
+  }),
+}
+```
