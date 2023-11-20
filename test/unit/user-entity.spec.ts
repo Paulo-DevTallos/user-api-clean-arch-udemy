@@ -1,15 +1,12 @@
 import { UserEntity, UserProps } from '@/users/domain/entities/user.entity';
+import { UserDataBuilder } from '@/users/domain/testable/helpers/user.databuilder';
 
 describe('UserEntity unit tests', () => {
   let props: UserProps;
   let sut: UserEntity;
 
   beforeEach(() => {
-    props = {
-      name: 'any_name',
-      email: 'any_email@example.com',
-      password: 'any_password',
-    };
+    props = UserDataBuilder({});
     sut = new UserEntity(props);
   });
 
