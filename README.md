@@ -104,3 +104,6 @@ Para ambiente de testes não há a necessidade de atribuir o ambiente, por padr�
 
 3. A ideia é que qualquer informação da entidade só possa ser manipulada pela propria entidade através de seus próprios
 métodos.
+
+4. Ao criar um método com propriedade readonly não é possível atribuír valor para ela, para isso é necessário criar setters
+que realizem essa ação
