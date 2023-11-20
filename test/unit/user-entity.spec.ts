@@ -17,6 +17,10 @@ describe('UserEntity unit tests', () => {
     expect(sut.props).toBeDefined();
   });
 
+  it('should test created_at is an instance of Date', () => {
+    expect(sut.props.created_at).toBeInstanceOf(Date);
+  });
+
   it('should test all fields receive type data as defined', () => {
     const user = {
       name: expect.any(String),
