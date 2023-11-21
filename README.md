@@ -107,3 +107,6 @@ métodos.
 
 4. Ao criar um método com propriedade readonly não é possível atribuír valor para ela, para isso é necessário criar setters
 que realizem essa ação
+
+5. Validações das Entidades: As regras crusciais da aplicação (Regras de negócios) estão na camada de domímio e precisamos
+garantir a consistencia dessas informações.
