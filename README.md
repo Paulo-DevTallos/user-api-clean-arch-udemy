@@ -110,3 +110,5 @@ que realizem essa ação
 
 5. Validações das Entidades: As regras crusciais da aplicação (Regras de negócios) estão na camada de domímio e precisamos
 garantir a consistencia dessas informações.
+
+6. Object.assigin(this, data): Atribui para a instancia os dados que estao sendo recebidas no construtor
